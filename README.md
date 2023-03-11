@@ -5,12 +5,7 @@ This project is aimed at classifying the given image of a lung into one of four 
 **Dataset**
 
 Two datasets have been used to train and test the model. One dataset is from the COVID-19 Chest X-ray dataset and the other one is from the Chest X-ray Pneumonia dataset. These datasets contain images of lungs of different individuals and the corresponding labels.
-
-**Dataset Sources**
-
-COVID-19 Chest X-ray dataset
-
-Chest X-ray Pneumonia dataset
+Dataset Souce::https://github.com/ieee8023/covid-chestxray-dataset and https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia.
 
 **Approach**
 
