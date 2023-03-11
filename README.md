@@ -1,1 +1,22 @@
-The project is made above is to classify wether the given image of a lung is a normal lung, Lung affected by covid 19,If it is Viral pneumonia or bacterial pneumonia. To build the baove model we use the transfer learning and the model that we have used to build the CNN network is the ResNET50 Model. After building the CNN network and testing it on the test set we found that accuracy on the test set is 83.33%. We also implemented early stopping in the code to make sure that the model to avoid overfitting. The model can classify the elemnets in a pretty good way.The dataset for the project made above can be found here:https://github.com/ieee8023/covid-chestxray-dataset and https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia. 
+**Lung Disease Classification using CNN and Transfer Learning**
+
+This project is aimed at classifying the given image of a lung into one of four classes: normal lung, lung affected by COVID-19, viral pneumonia, or bacterial pneumonia. The model is built using transfer learning and the ResNET50 model is used to build the CNN network.
+
+**Dataset**
+
+Two datasets have been used to train and test the model. One dataset is from the COVID-19 Chest X-ray dataset and the other one is from the Chest X-ray Pneumonia dataset. These datasets contain images of lungs of different individuals and the corresponding labels.
+
+**Dataset Sources**
+
+COVID-19 Chest X-ray dataset
+
+Chest X-ray Pneumonia dataset
+
+**Approach**
+
+We have used transfer learning to build the CNN network using the ResNET50 model. The model is trained on the above datasets and the accuracy is measured on the test set. We have also implemented early stopping in the code to avoid overfitting.
+
+**Results**
+
+After building the CNN network and testing it on the test set, we found that the accuracy on the test set is 83.33%. The model can classify the elements in a pretty good way.
+
