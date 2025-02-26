@@ -1,17 +1,57 @@
-**Lung Disease Classification using CNN and Transfer Learning**
+# Lung Disease Classification Using X-Ray Images
 
-This project is aimed at classifying the given image of a lung into one of four classes: normal lung, lung affected by COVID-19, viral pneumonia, or bacterial pneumonia. The model is built using transfer learning and the ResNET50 model is used to build the CNN network.
+## Overview
+This project aims to classify lung X-ray images into four categories: 
+- **Covid-19**
+- **Normal**
+- **Viral Pneumonia**
+- **Bacterial Pneumonia**
 
-**Dataset**
+Using transfer learning with a pre-trained **ResNet50** model, the system processes and analyzes chest X-ray images to provide accurate classifications.
 
-Two datasets have been used to train and test the model. One dataset is from the COVID-19 Chest X-ray dataset and the other one is from the Chest X-ray Pneumonia dataset. These datasets contain images of lungs of different individuals and the corresponding labels.
-Dataset Souce::https://github.com/ieee8023/covid-chestxray-dataset and https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia.
+## Features
+- Loads and preprocesses lung X-ray images.
+- Uses **TensorFlow's ImageDataGenerator** for data augmentation and normalization.
+- Implements **ResNet50** with transfer learning for improved accuracy.
+- Includes early stopping and model checkpointing for optimal performance.
+- Evaluates model performance using a confusion matrix and classification report.
+- Generates visualizations of predictions against ground truth labels.
 
-**Approach**
+## Requirements
+Install the necessary dependencies using:
+```bash
+pip install numpy pandas seaborn matplotlib tensorflow keras opencv-python
+```
 
-We have used transfer learning to build the CNN network using the ResNET50 model. The model is trained on the above datasets and the accuracy is measured on the test set. We have also implemented early stopping in the code to avoid overfitting.
+## Dataset
+- The dataset is stored in a Google Drive directory.
+- Images are categorized into four classes and loaded using **ImageDataGenerator**.
+- Training and validation data are split with an 80-20 ratio.
 
-**Results**
+## How to Run
+1. Mount Google Drive and set the dataset path.
+2. Load and preprocess X-ray images.
+3. Train the ResNet50-based model with early stopping and checkpointing.
+4. Evaluate the model using a test set.
+5. Visualize predictions and model performance metrics.
 
-After building the CNN network and testing it on the test set, we found that the accuracy on the test set is 83.33%. The model can classify the elements in a pretty good way.
+## Model Training
+- Uses **ResNet50** as a base model, freezing layers up to stage 4.
+- Adds custom dense layers for classification.
+- Trains using **Adam optimizer** with categorical cross-entropy loss.
+- Saves the best model based on validation loss.
+
+## Evaluation
+- Computes accuracy on the test dataset.
+- Generates a confusion matrix for classification analysis.
+- Produces a classification report with precision, recall, and F1-score.
+- Displays sample predictions comparing model output with ground truth labels.
+
+## Output
+- Trained model for lung disease classification.
+- Performance plots for accuracy and loss during training.
+- Visualizations of test images with predicted vs. actual labels.
+
+## License
+This project is open-source and can be used for educational and research purposes.
 
